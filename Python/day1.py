@@ -10,8 +10,8 @@ def depth_increases(depths: list[int]) -> int:
 
 def depth_increases_sliding_windows(depths: list[int]) -> int:
     increases = 0
-    prev_window = math.inf
-    for i in range(1, len(depths) - 1):
+    prev_window = (depths[0] + depths[1] + depths[2])
+    for i in range(2, len(depths) - 1):
         window = (depths[i-1] + depths[i] + depths[i+1])
         if (window > prev_window):
             increases += 1

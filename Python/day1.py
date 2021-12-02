@@ -22,8 +22,9 @@ if __name__ == "__main__":
     # python day1.py < day1_puzzle.txt into cmd promt
     lines = sys.stdin.readlines()
     depths = [int(line) for line in lines]
+    
     solution = depth_increases(depths)
     print("First solution:", solution)
 
-    solution_two = depth_increases_sliding_windows(depths)
+    solution_two = depth_increases_sliding_windows(depths) 
     print ("Second solution:", solution_two)

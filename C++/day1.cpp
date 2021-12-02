@@ -34,7 +34,7 @@ int main() {
 
     // get lines from txt file
     vector<int> depths;
-    for (string line; getline(std::cin, line);) {
+    for (string line; getline(cin, line);) {
         depths.push_back(stoi(line));
     }
     

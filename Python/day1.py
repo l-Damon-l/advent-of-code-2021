@@ -1,5 +1,4 @@
 import sys
-import math
 
 def depth_increases(depths: list[int]) -> int:
     increases = 0
@@ -27,4 +26,4 @@ if __name__ == "__main__":
     print("First solution:", solution)
 
     solution_two = depth_increases_sliding_windows(depths) 
-    print ("Second solution:", solution_two)
+    print ("Second solution:", solution_two)  

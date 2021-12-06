@@ -4,33 +4,33 @@ class Submarine:
     def __init__(self):
         self.horizontal_position = 0
         self.depth = 0
-    def forward(self, amount: int):
+    def forward(self, amount: int) -> None:
         self.horizontal_position += amount
-    def down(self, amount: int):
+    def down(self, amount: int) -> None:
         self.depth += amount
-    def up(self, amount: int):
+    def up(self, amount: int) -> None:
         self.depth -= amount
-    def get_horizontal_position_times_depth(self):
-        return self.horizontal_position * self.depth
+    def get_horizontal_position_times_depth(self) -> int:
+        return int(self.horizontal_position * self.depth)
 
 class BetterSubmarine:
     def __init__(self):
         self.horizontal_position = 0
         self.depth = 0
         self.aim = 0
-    def forward(self, amount: int):
+    def forward(self, amount: int) -> None:
         self.horizontal_position += amount
         self.depth += (self.aim * amount)
-    def down(self, amount: int):
+    def down(self, amount: int) -> None:
         self.aim += amount
-    def up(self, amount: int):
+    def up(self, amount: int) -> None:
         self.aim -= amount
-    def get_horizontal_position_times_depth(self):
-        return self.horizontal_position * self.depth
+    def get_horizontal_position_times_depth(self) -> int:
+        return int(self.horizontal_position * self.depth)
 
 
 if __name__ == "__main__":
-    # Python day2.py < day2_puzzle.txt into cmd prompt
+    # python day2.py < day2_puzzle.txt into cmd prompt
     lines = sys.stdin.readlines()
     instructions = []
     for line in lines:

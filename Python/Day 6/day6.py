@@ -1,19 +1,10 @@
 import sys
-from collections import OrderedDict
 
 
 lanternfish_list = [int(i) for i in str(sys.stdin.readline()).split(",")]
 
 
-def _count_dict(dictionary: dict) -> int:
-    # Gets amount of fish in the dictionary
-    size = 0
-    for (_, val) in dictionary.items():
-        size += val
-    return size
-
-
-def simulate_lanternfish(lanternfish: list[int], num_days: int) -> list[int]:
+def simulate_lanternfish(lanternfish: list[int], num_days: int) -> int:
     # Initialise dict
     dictionary = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0}
     for fish in lanternfish:
@@ -28,7 +19,7 @@ def simulate_lanternfish(lanternfish: list[int], num_days: int) -> list[int]:
             dictionary[i] = 0
         dictionary[8] += temp_val
         dictionary[6] += temp_val
-    return _count_dict(dictionary)
+    return sum(dictionary.values())
 
 
 if __name__ == "__main__":

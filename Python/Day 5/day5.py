@@ -30,13 +30,13 @@ def get_max_x_and_max_y(coordinate_list: list[(Coordinate, Coordinate)]) -> tupl
         # Check if x bigger than current max x
         if coordinate_pair[0].get_x() > max_x:
             max_x = coordinate_pair[0].get_x()
-            if coordinate_pair[1].get_x() > max_x:
-                max_x = coordinate_pair[1].get_x()
+        if coordinate_pair[1].get_x() > max_x:
+            max_x = coordinate_pair[1].get_x()
         # Check if y bigger than current max y
         if coordinate_pair[0].get_y() > max_y:
             max_y = coordinate_pair[0].get_y()
-            if coordinate_pair[1].get_y() > max_y:
-                max_y = coordinate_pair[1].get_y()
+        if coordinate_pair[1].get_y() > max_y:
+            max_y = coordinate_pair[1].get_y()
     return (max_x, max_y)
 
 

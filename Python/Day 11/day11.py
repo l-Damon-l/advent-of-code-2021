@@ -22,9 +22,9 @@ def main():
         octopus_grid.grid_step()
     print("Solution one:", octopus_grid.flashes)
 
-    # How many steps until all nodes flash simulatneously
+    # How many steps until all nodes flash simultaneously
     while not octopus_grid.found_part_two_solution:
-        octopus_grid.grid_step()  # Prints solution from class
+        octopus_grid.grid_step()
     print("Solution two:", octopus_grid.steps)
 
 
